@@ -2,6 +2,7 @@
 // Объеденить с обычным листом
 //
 // 1
+// 4
 import DisheCard from './DisheCard.vue';
 export default{
   name: 'FiltredDishesList',
