@@ -3,6 +3,7 @@
 //
 // 1
 // 4
+// 5
 import DisheCard from './DisheCard.vue';
 export default{
   name: 'FiltredDishesList',
