@@ -65,3 +65,4 @@ export default{
   min-width: 984px
   margin-bottom: 20px
 </style>
+// 2
