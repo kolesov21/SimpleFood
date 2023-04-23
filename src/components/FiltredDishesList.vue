@@ -1,5 +1,6 @@
 <script>
 // Объеденить с обычным листом
+//
 import DisheCard from './DisheCard.vue';
 export default{
   name: 'FiltredDishesList',
