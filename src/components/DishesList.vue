@@ -8,6 +8,10 @@ export default{
       type: Array,
       required: true,
     },
+    label:{
+      type: String,
+      required: true,
+    }
   },
   components: {
     DisheCard,
@@ -28,7 +32,7 @@ export default{
 </script>
 
 <template>
-  <h1 class="label">Предложение дня</h1>
+  <h1 class="label">{{ this.label }}</h1>
   <div class="wrapper">
     <div class="disheslist">
       <DisheCard 
