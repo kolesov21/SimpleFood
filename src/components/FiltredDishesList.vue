@@ -1,9 +1,5 @@
 <script>
 // Объеденить с обычным листом
-//
-// 1
-// 4
-// 5
 import DisheCard from './DisheCard.vue';
 export default{
   name: 'FiltredDishesList',
@@ -68,4 +64,3 @@ export default{
   min-width: 984px
   margin-bottom: 20px
 </style>
-// 2
