@@ -5,6 +5,10 @@ import DishesList from './components/DishesList.vue';
 import Footer from './components/Footer.vue';
 import FiltredDishesList from './components/FiltredDishesList.vue';
 
+import MyInput from './components/UI/MyInput.vue';
+import MyButton from './components/UI/MyButton.vue';
+
+
 export default [
   Navigation,
   Promo,
@@ -12,4 +16,6 @@ export default [
   DishesList,
   Footer,
   FiltredDishesList,
+  MyInput,
+  MyButton
 ]
