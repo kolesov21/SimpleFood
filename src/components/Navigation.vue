@@ -7,14 +7,16 @@ export default{
 <template>
   <div class="wrapper">
     <nav>
-      <div class="logo">
-        <img class="logo__icon" src="/icons/logo.svg" alt="Logo Icon">
-        <p class="logo__text">Simple<span class="logo__text_darkgreen">Food</span></p>
-      </div>
+      <RouterLink to="/">
+        <div class="logo">
+          <img class="logo__icon" src="/icons/logo.svg" alt="Logo Icon">
+          <p class="logo__text">Simple<span class="logo__text_darkgreen">Food</span></p>
+        </div>
+      </RouterLink>
       <div class="nav">
-        <img class="nav__item" src="/icons/searchIcon.svg" alt="Search">
+        <RouterLink to="/search"><img class="nav__item" src="/icons/searchIcon.svg" alt="Search"></RouterLink>
         <img class="nav__item" src="/icons/profileIcon.svg" alt="Profile">
-        <img class="nav__item" src="/icons/basketIcon.svg" alt="Basket">
+        <RouterLink to="/bascket"><img class="nav__item" src="/icons/basketIcon.svg" alt="Basket"></RouterLink>
       </div>
     </nav>
   </div>
