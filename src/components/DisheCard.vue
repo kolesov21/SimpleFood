@@ -84,7 +84,6 @@ export default{
 
   <ModalWindow v-if="showModal" @close="showModal = false" v-slot="{close}">
       <div class="wrapper">
-      <button @click="close">Close</button>
       <div class="dishecardDetails">
         <img
           class="dishecardDetails__photo"
@@ -120,6 +119,7 @@ export default{
     height: 130px
     border-radius: 15px 15px 0px 0px
     cursor: pointer
+    object-fit: cover
   &__info
     display: flex
     flex-direction: column
@@ -151,6 +151,7 @@ export default{
     width: 480px
     height: 250px
     border-radius: 15px 15px 0px 0px
+    object-fit: cover
   &__info
     display: flex
     flex-direction: column
