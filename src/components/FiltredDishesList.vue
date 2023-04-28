@@ -16,18 +16,6 @@ export default{
   components: {
     DisheCard,
   },
-  emits: [
-    'disheAddedToBascket', 
-    'disheRemovedFromBascket'
-  ],
-  methods: {
-    addDisheToBascket(dishe){
-      this.$emit('disheAddedToBascket', dishe);
-    },
-    removeDisheFromBascket(dishe){
-      this.$emit('disheRemovedFromBascket', dishe);
-    }
-  }
 }
 </script>
 
@@ -38,15 +26,7 @@ export default{
       <DisheCard 
         v-for="dishe in dishes"
         :key="dishe.id"
-
-        :id="dishe.id"
-        :name="dishe.name"
-        :price="dishe.price"
-        :description="dishe.description"
-        :imgPath="dishe.imgPath"
-
-        @disheAddedToBascket="addDisheToBascket"
-        @disheRemovedFromBascket="removeDisheFromBascket"
+        :dishe="dishe"
       >
       </DisheCard>
     </div>

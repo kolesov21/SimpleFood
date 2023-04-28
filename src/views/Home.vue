@@ -2,10 +2,6 @@
 import dishes from '@/assets/dishes';
 
 export default{
-  emits: [
-    'disheAddedToBascket',
-    'disheRemovedFromBascket'
-  ],
   data(){
     return {
       dishes: dishes,
@@ -15,12 +11,6 @@ export default{
     }
   },
   methods:{
-    addDisheToBascket(dishe){
-      this.$emit('disheAddedToBascket', dishe);
-    },
-    removeDisheFromBascket(dishe){
-      this.$emit('disheRemovedFromBascket', dishe);
-    },
     updateCategory(categoryLabel){
       if (categoryLabel === this.curentCategory){
         this.curentCategory = "Все";
@@ -44,8 +34,6 @@ export default{
     v-if = "curentCategory === 'Все'"
     :dishes = "this.dishes"
     :label = "this.label"
-    @disheAddedToBascket = "addDisheToBascket"
-    @disheRemovedFromBascket = "removeDisheFromBascket"
   >
   </DishesList>
   <FiltredDishesList
@@ -53,7 +41,6 @@ export default{
     :dishes = "this.filtredDishes"
     :category = "this.curentCategory"
   ></FiltredDishesList>
-  <Footer></Footer>
 </template>
 
 <style scoped lang="sass">
