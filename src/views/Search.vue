@@ -13,7 +13,9 @@ export default{
     search() {
       this.foundDishes = [];
       dishes.forEach(item => {
-        if (item.name.toLowerCase().indexOf(this.searchInput.toLowerCase()) !== -1) {
+        if (item.name.toLowerCase().indexOf(this.searchInput.toLowerCase()) !== -1
+            || item.category.toLowerCase().indexOf(this.searchInput.toLowerCase()) !== -1
+            || item.description.toLowerCase().indexOf(this.searchInput.toLowerCase()) !== -1) {
           this.foundDishes.push(item);
         }
       });
