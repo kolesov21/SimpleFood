@@ -30,13 +30,10 @@ footer
   display: flex
   flex-direction: column
   align-items: center
-  padding: 20px 0px
   padding-top: 10px
   gap: 8px
   background-color: white
   width: 100%
-  position: absolute
-  bottom: 0
 .footer__top
   display: flex
   justify-content: space-between
