@@ -20,7 +20,7 @@ export default [
     name: "Оливье",
     category: "Стейки",
     price: 499,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/olivSalad.jpg",
   },
   {
@@ -28,7 +28,7 @@ export default [
     name: "Цезарь",
     category: "Салаты",
     price: 799,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/cezSalad.jpg",
   },
   {
@@ -36,7 +36,7 @@ export default [
     name: "Кработый",
     category: "Салаты",
     price: 399,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/crabSalad.jpg",
   },
   {
@@ -44,7 +44,7 @@ export default [
     name: "Греческий",
     category: "Салаты",
     price: 699,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/grecSalad.jpg",
   },
   {
@@ -52,7 +52,7 @@ export default [
     name: "Заморский",
     category: "Салаты",
     price: 599,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/salad.png",
   },
   {
@@ -60,7 +60,7 @@ export default [
     name: "Оливье",
     category: "Салаты",
     price: 499,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/olivSalad.jpg",
   },
   {
@@ -68,7 +68,7 @@ export default [
     name: "Цезарь",
     category: "Горячее",
     price: 799,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/cezSalad.jpg",
   },
   {
@@ -76,7 +76,7 @@ export default [
     name: "Кработый",
     category: "Горячее",
     price: 399,
-    description: "Очень вкучный салат!",
+    description: "Очень вкусный салат!",
     imgPath: "/dishes/crabSalad.jpg",
   },
 ]
