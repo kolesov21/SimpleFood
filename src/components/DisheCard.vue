@@ -1,62 +1,43 @@
 <script>
 import ModalWindow from './UI/ModalWindow.vue';
+import { useBascketStore } from '@/stores/bascket.js'
+import { mapState, mapActions } from 'pinia'
 
 export default{
   name: 'DisheCard',
   props: {
-    id: {
-      type: Number,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: Number,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    imgPath: {
-      type: String,
-      required: true,
-    },
+    dishe: {
+      type: Object,
+      required: true
+    }
   },
   components:{
     ModalWindow,
   },
-  emits: [
-    'disheAddedToBascket',
-    'disheRemovedFromBascket'
-  ],
   data() {
     return {
       showModal: false,
-      dishe: {
-        id: this.id,
-        name: this.name,
-        price: this.price,
-      },
-      inBasket: false
+      inBasket: this.isContain(this.dishe),
     }
   },
   methods: {
+    ...mapActions(useBascketStore, ['add']),
+    ...mapActions(useBascketStore, ['remove']),
+    ...mapActions(useBascketStore, ['isContain']),
+    
     changeBasket(){
       if (!this.inBasket){
-        this.inBasket = true;
-        this.$emit('disheAddedToBascket', this.dishe);
+        this.add(this.dishe);
+        this.inBasket = this.isContain(this.dishe);
       }else{
-        this.inBasket = false;
-        this.$emit('disheRemovedFromBascket', this.dishe);
+        this.remove(this.dishe, 1);
+        this.inBasket = this.isContain(this.dishe);
       }
     },
     openDetails(){
       this.showModal = true;
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -65,13 +46,13 @@ export default{
     <img 
       @click="openDetails" 
       class="dishecard__photo" 
-      :src="imgPath" 
-      :alt="name"
+      :src="this.dishe.imgPath" 
+      :alt="this.dishe.name"
     >
     <div class="dishecard__info">
-      <p class="dishecard__name">{{ name }}</p>
+      <p class="dishecard__name">{{ this.dishe.name }}</p>
       <div class="dishecard__info-bottom">
-        <p class="dishecard__price">{{ price }} руб.</p>
+        <p class="dishecard__price">{{ this.dishe.price }} руб.</p>
         <img 
           @click="changeBasket" 
           class="dishecard__button" 
@@ -87,14 +68,14 @@ export default{
       <div class="dishecardDetails">
         <img
           class="dishecardDetails__photo"
-          :src="imgPath" 
-          :alt="name"
+          :src="this.dishe.imgPath" 
+          :alt="this.dishe.name"
         >
         <div class="dishecardDetails__info">
           <div class="dishecardDetails__info-top">
-            <p class="dishecardDetails__text">{{ name }}</p>
+            <p class="dishecardDetails__text">{{ this.dishe.name }}</p>
             <div class="dishecardDetails__price-info">
-              <p class="dishecardDetails__price">{{ price }} руб.</p>
+              <p class="dishecardDetails__price">{{ this.dishe.price }} руб.</p>
               <img 
                 @click="changeBasket" 
                 class="dishecardDetails__button" 
@@ -103,7 +84,7 @@ export default{
               >
             </div>
           </div>
-          <p class="dishecardDetails__description">{{ description }}</p>
+          <p class="dishecardDetails__description">{{ this.dishe.description }}</p>
         </div>
       </div>
     </div>
